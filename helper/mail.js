@@ -52,7 +52,7 @@ async function leadMail(title, _id) {
         let mailOption = {
             from: 'App CRM <joshuaashvinth@gmail.com>',
             to: 'joshuaashvinth@gmail.com',
-            subject: `New Lead ${title}`,
+            subject: `New Lead (${title})`,
             html: `<h3>New Lead Created</h3></b>
             <p></p>
             <p>Title: ${title}</p></b>
