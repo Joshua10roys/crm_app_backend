@@ -281,7 +281,7 @@ const forgotPassword = async (req, res) => {
 
             await User.findByIdAndUpdate({ _id: userFromDB._id }, { randomToken: randomToken })
 
-            const link = `http://localhost:3000/user/resetPassword/${randomToken}`;
+            const link = `${process.env.URL}/user/resetPassword/${randomToken}`;
 
             await sendMail(username,
                 "Password Reset Mail",
